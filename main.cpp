@@ -67,7 +67,7 @@ Stopwatch::Stopwatch(sf::RenderWindow *window)
     renderNumbers();
 
     //Set the clock hands.
-    if(!secondHandTexture.loadFromFile("_img/second_hand.png") || !minuteHandTexture.loadFromFile("_img/minute_hand.png") || !hourHandTexture.loadFromFile("_img/hour_hand.png"))
+    if(!secondHandTexture.loadFromFile("img/second_hand.png") || !minuteHandTexture.loadFromFile("img/minute_hand.png") || !hourHandTexture.loadFromFile("img/hour_hand.png"))
     {
         exit(0);
     }
@@ -107,7 +107,7 @@ Stopwatch::Stopwatch(sf::RenderWindow *window)
 
 void Stopwatch::renderNumbers()
 {
-    if(watchFaceTexture.loadFromFile("_img/clock_face.png"))
+    if(watchFaceTexture.loadFromFile("img/clock_face.png"))
     {
         watchFaceTexture.setSmooth(true);
         watchFace.setTexture(&watchFaceTexture);
@@ -143,7 +143,7 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Analogue Clock", sf::Style::Close);
     sf::Image img;
-    if(!img.loadFromFile("_img/icon1.png"))
+    if(!img.loadFromFile("img/icon1.png"))
     {
         exit(0);
     }
